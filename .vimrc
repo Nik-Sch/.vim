@@ -30,10 +30,14 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
+set relativenumber
 set number
 set encoding=utf-8
 syntax on
 set nofoldenable
+set guioptions-=r
+set guioptions-=L
+set guioptions-=T
 
 " syntastic settings
 set statusline+=%#warningmsg#
@@ -127,9 +131,16 @@ let g:vim_markdown_folding_diabled=1
 autocmd BufNewFile,BufRead *.md :silent !chromium %
 
 " autosave
-let g:auto_save = 1
-let g:auto_save_in_insert_mode = 0
+"let g:auto_save = 1
+"let g:auto_save_in_insert_mode = 0
 
 " vim-latex
 let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_IgnoreLevel=7
+let g:tex_flavor='latex'
+" save file before compiling
+autocmd FileType tex call Tex_MakeMap("<Leader>ll", ":w <CR> <Plug>Tex_Compile", 'n', '<buffer>')
+autocmd FileType tex call Tex_MakeMap("<Leader>ll", "<ESC> :w <CR> <Plug>Tex_Compile", 'v', '<buffer>')
+
+" zsh-theme syntax -> zsh
+au BufEnter *.zsh-theme set syntax=zsh

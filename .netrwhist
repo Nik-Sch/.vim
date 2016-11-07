@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/niklas/.config/gtk-2.0'
+let g:netrw_dirhist_2='/home/niklas/AndroidStudioProjects/ChatApp'
+let g:netrw_dirhist_3='/home/niklas/uni/sem01/RorgPr/3-4'
+let g:netrw_dirhist_4='/home/niklas/uni/sem01/RorgPr/3-4/Blatt07/praxis'
